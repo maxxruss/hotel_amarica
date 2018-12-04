@@ -1,0 +1,76 @@
+@font-face {
+  font-family: bebas_Neue_Bold;
+  src: url("../packages/fonts/bebas_Neue_Bold.ttf")
+}
+@font-face {
+  font-family: OpenSans, sans-serif;
+
+  src: url("../packages/fonts/openSans.ttf");
+}
+$mainColor: #4e26fd;
+
+@mixin text {
+  font-family: bebas_Neue_Bold, sans-serif;
+  font-weight: 400;
+}
+@mixin blockInside {
+  max-width: 1140px;
+  margin: auto;
+}
+@mixin textHeader{
+  @include text;
+  font-size: 50px;
+  text-align: center;
+  color: black;
+  margin: 50px;
+}
+@mixin wrapHeader {
+  font-family: OpenSans, sans-serif;
+  color: #010101;
+  font-size: 14px;
+  font-weight: 900;
+  text-align: center;
+  margin: 14px;
+}
+@mixin wrapText {
+  font-family: OpenSans, sans-serif;
+  color:  #010101;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+}
+@mixin buttonWhite {
+  background-color: white;
+  width: 124px;
+  height: 49px;
+  line-height: 49px;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  @include text;
+  color: $mainColor;
+  font-size: 25px;
+  border: $mainColor solid 2px;
+}
+@mixin respondTo($_media) {
+  @if $_media == phones {
+    @media all and (max-width: 479px) { @content; }
+  }
+  @else if $_media == wide-phones {
+    @media all and (min-width: 480px) and (max-width: 767px) { @content; }
+  }
+  @else if $_media == tablets {
+    @media all and (min-width: 768px) and (max-width: 991px) { @content; }
+  }
+  @else if $_media == small-desktops {
+    @media all and (min-width: 992px) and (max-width: 1199px) { @content; }
+  }
+  @else if $_media == lg-desktops {
+    @media all and (min-width: 1200px) and (max-width: 1440px) { @content; }
+  }
+  @else if $_media == xlg-desktops {
+    @media all and (min-width: 1441px) and (max-width: 1920px) { @content; }
+  }
+}

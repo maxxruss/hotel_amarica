@@ -1,0 +1,469 @@
+@import "variables";
+
+.navBlock {
+  @include blockInside;
+  margin: 15px auto;
+  .logo {
+    max-width: 121px;
+    max-height: 53px;
+    @include respondTo(wide-phones) {
+      margin: 0 auto;
+    }
+    @include respondTo(phones) {
+      margin: 0 auto;
+    }
+  }
+  ul {
+    float: right;
+    margin-top: 15px;
+    @include respondTo(wide-phones) {
+      width: 100%;
+      text-align: center;
+      padding: 0;
+    }
+    @include respondTo(phones) {
+      width: 100%;
+      text-align: center;
+      padding: 0;
+    }
+    li {
+
+      list-style-type: none;
+      display: inline-block;
+      margin-right: 20px;
+      @include respondTo(phones) {
+        margin-right: 5px;
+      }
+      a {
+        @include text;
+        color: black;
+        text-decoration: none;
+      }
+    }
+  }
+}
+.noPadding {
+   padding: 0;
+}
+.headerImage {
+  display: flex;
+  flex-direction: row;
+}
+.headerImageLeft {
+  position: relative;
+    .headerTextWhite {
+      @include text;
+      color: white;
+      font-size: 80px;
+      line-height: 90px;
+      width: 100%;
+      position: absolute;
+      top: 80%;
+      left: 20%;
+      @include respondTo(wide-phones) {
+         font-size: 40px;
+      }
+      @include respondTo(phones) {
+        font-size: 40px;
+      }
+    }
+    .headerTextBlack {
+      @include text;
+      color: black;
+      font-size: 55px;
+      line-height: 60px;
+      position: absolute;
+      left: 20%;
+      @include respondTo(wide-phones) {
+        font-size: 30px;
+      }
+      @include respondTo(phones) {
+        font-size: 30px;
+      }
+    }
+  }
+.headerWrapImageLeft {
+  .headerImageLeft img {
+    width: 100%;
+    max-width: 930px;
+  }
+}
+.headerImageRight1,
+.headerImageRight2 {
+  img {
+    width: 100%;
+    max-width: 470px;
+  }
+}
+.bookNow {
+  max-width: 1140px;
+  width: 100%;
+  margin: 25px auto;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-color: $mainColor;
+  margin: 25px auto;
+  background: #1c1c1c;
+  height: 80px;
+  width: 830px;
+
+  input {
+    max-width: 150px;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    margin-left: 20px;
+    @include respondTo(tablets) {
+    padding: 0;
+    margin-left: 5px;
+    }
+    @include respondTo(wide-phones){
+      padding: 0;
+      margin-left: 5px;
+    }
+    @include respondTo(phones) {
+    padding: 0;
+    margin-left: 5px;
+    }
+  }
+}
+input::-webkit-input-placeholder {
+  color: black;
+  font-family: openSans, sans-serif;
+  font-weight: 800;
+}
+input[type='submit'] {
+  color: white;
+  background: $mainColor;
+  @include text;
+  font-size: 20px;
+  border: none;
+  line-height: 40px;
+  padding: 0;
+  margin-right: 20px;
+}
+.awardHeader {
+  @include textHeader;
+}
+.awardGrid {
+  @include blockInside;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 350px 350px;
+  grid-gap: 50px;
+  text-align: center;
+  .awardWrapHeader {
+    @include wrapHeader;
+  }
+  .awardWrapText {
+    @include wrapText;
+  }
+  @include respondTo (tablets) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 350px 350px 350px;
+  }
+  @include respondTo (wide-phones) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 350px);
+  }
+  @include respondTo (phones) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 350px);
+  }
+}
+.awardImg img {
+  max-width: 353px;
+  width: 100%;
+}
+.awardWrapHeader {
+  @include wrapHeader;
+}
+.awardWrapText {
+  @include wrapText;
+}
+.awardButton a {
+  @include buttonWhite;
+  margin: 20px auto;
+}
+.winterHeader {
+  @include textHeader;
+  margin: 50px;
+}
+.winterList {
+  display: flex;
+  flex-direction: row;
+}
+.winterWrapSport {
+  text-align: left;
+  position: relative;
+  .winterWrapHeader {
+    font-family: bebas_Neue_Bold, sans-serif;
+    font-size: 60px;
+    font-weight: 800;
+    position: absolute;
+    margin-top: -130px;
+    margin-left: 15px;
+    color: white
+
+  }
+  .winterWrapText {
+    color: white;
+    margin-top: -80px;
+    position: absolute;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+.deluxeHeader {
+  @include textHeader;
+}
+.deluxeWrap1 {
+  grid-area: deluxeWrap1;
+}
+.deluxeWrap2 {
+  grid-area: deluxeWrap2;
+}
+.deluxeWrap3 {
+  grid-area: deluxeWrap3;
+}
+.deluxeWrap4 {
+  grid-area: deluxeWrap4;
+}
+.deluxeWrap5 {
+  grid-area: deluxeWrap5;
+}
+.deluxeWrap6 {
+  grid-area: deluxeWrap1;
+}
+.deluxeGrid {
+  @include blockInside;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 300px 300px;
+  grid-gap: 30px;
+  text-align: center;
+  grid-template-areas: "deluxeWrap1 deluxeWrap2 deluxeWrap3" "deluxeWrap4 deluxeWrap2 deluxeWrap5";
+  .deluxeImg img {
+    width: 265px;
+  }
+  .deluxeWrap2 >.deluxeImg > Img {
+    max-width: 515px;
+    width: 100%;
+    margin: 45px 0;
+  }
+  @include respondTo (tablets) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 300px 300px 600px;
+    grid-template-areas: "deluxeWrap4 deluxeWrap3"
+                          "deluxeWrap1 deluxeWrap5"
+                          "deluxeWrap2 deluxeWrap2";
+  }
+  @include respondTo (wide-phones) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 300px 300px 600px;
+    grid-template-areas: "deluxeWrap4 deluxeWrap3"
+    "deluxeWrap1 deluxeWrap5"
+    "deluxeWrap2 deluxeWrap2";
+  }
+  @include respondTo (phones) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 300px) 600px;
+    grid-template-areas: "deluxeWrap4" "deluxeWrap3"
+    "deluxeWrap1" "deluxeWrap5"
+    "deluxeWrap2" "deluxeWrap2";
+  }
+}
+.deluxeWrapHeader {
+  @include wrapHeader;
+}
+.deluxeWrapText {
+  @include wrapText;
+}
+.deluxeButton a {
+  @include buttonWhite;
+  margin: 20px auto;
+}
+.weatherContent {
+  height: 554px;
+  background-image: url("../images/Layer_8.png");
+  position: relative;
+  .weatherWrapText {
+    position: absolute;
+    top: 30%;
+    right: 15%;
+    .weatherHeader {
+      @include text;
+      font-size: 100px;
+      color: white;
+      line-height: 90px;
+      text-shadow: 0 3px 7px rgba(0, 0, 0, 0.35);
+    }
+    .weatherText {
+      font-family: OpenSans, sans-serif;
+      text-shadow: 0 2px 0 #000000;
+      color: white;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+}
+.newsHeader {
+  @include textHeader;
+}
+.newsImg img {
+  max-width: 353px;
+  width: 100%;
+}
+.newsGrid {
+  @include blockInside;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 450px;
+  grid-gap: 30px;
+  text-align: center;
+  .newsWrapHeader {
+    @include wrapHeader;
+  }
+  .newsWrapText {
+    @include wrapText;
+  }
+  @include respondTo (tablets) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 450px);
+  }
+  @include respondTo (wide-phones) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 450px);
+  }
+  @include respondTo (phones) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 450px);
+  }
+}
+.newsButton a {
+  @include buttonWhite;
+  margin: 40px auto;
+}
+footer {
+  background: #252525;
+  min-height: 390px;
+  height: auto;
+}
+.footerInside {
+  min-height: 343px;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.footerColumnWrap {
+  height: auto;
+
+  margin-top: 75px;
+  img {
+    margin-bottom: 15px;
+  }
+  .column {
+    font-family: OpenSans, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+  }
+  .column a {
+    @include text;
+    color: white;
+    font-size: 14px;
+  }
+}
+.footerColumnWrap .column:nth-child(1) {
+  width: 180px;
+}
+.footerColumnWrap .column:nth-child(5) {
+  width: 180px;
+}
+
+
+.column a {
+  display: block;
+  text-decoration: none;
+  font-family: roboto-regular sans-serif;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  height: 100%;
+}
+.column input {
+  background-color: #fff51f;
+  width: 180px;
+  height: 30px;
+  border: none;
+  text-transform: uppercase;
+  outline: none;
+  box-sizing: border-box;
+  float: left;
+}
+.columnText {
+  text-align: justify;
+  font-family: roboto-regular, sans-serif;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 400;
+}
+.phone .email {
+  font-family: Roboto, sans-serif;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: left;
+}
+.email span {
+  color: #faef03;
+}
+.footerCopyRight {
+  width: 100%;
+  background: #252525;
+  min-height: 47px;
+  height: auto;
+}
+.CopyRightInside {
+  height: inherit;
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+}
+.footerCopy {
+  color: white;
+}
+.footerSocial {
+  list-style-type: none;
+  height: inherit;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 178px;
+  justify-content: space-around;
+  width: 100%;
+}
+.footerSocial ul li {
+  display: inline-block;
+  width: 20px;
+}
+.footerSocial ul li a {
+  color: white;
+}
+.footerCopy {
+  text-align: center;
+  font-size: 16px;
+  @include blockInside;
+}
