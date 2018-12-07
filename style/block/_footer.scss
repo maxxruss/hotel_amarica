@@ -1,0 +1,120 @@
+footer {
+  background: #252525;
+  min-height: 390px;
+  height: auto;
+}
+.footerInside {
+  min-height: 343px;
+  height: auto;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  @include media-breakpoint-down(xs) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, minmax(1fr, 150px));
+    justify-items: center;
+    grid-gap: 20px;
+  }
+}
+.footerColumnWrap {
+  height: auto;
+  margin-top: 75px;
+  @include media-breakpoint-down(xs) {
+    margin-top: 0;
+  }
+  img {
+    margin-bottom: 15px;
+  }
+  .column {
+    font-family: OpenSans, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+  }
+  .column a {
+    @include text;
+    color: white;
+    font-size: 14px;
+  }
+}
+.footerColumnWrap {
+  max-width: 180px;
+}
+
+
+.column a {
+  display: block;
+  text-decoration: none;
+  font-family: roboto-regular sans-serif;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  height: 100%;
+}
+.column input {
+  background-color: #fff51f;
+  width: 180px;
+  height: 30px;
+  border: none;
+  text-transform: uppercase;
+  outline: none;
+  box-sizing: border-box;
+  float: left;
+}
+.columnText {
+  text-align: justify;
+  font-family: roboto-regular, sans-serif;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 400;
+}
+.phone .email {
+  font-family: Roboto, sans-serif;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: left;
+}
+.email span {
+  color: #faef03;
+}
+.footerCopyRight {
+  width: 100%;
+  background: #252525;
+  min-height: 47px;
+  height: auto;
+}
+.CopyRightInside {
+  height: inherit;
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+}
+.footerCopy {
+  color: white;
+}
+.footerSocial {
+  list-style-type: none;
+  height: inherit;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 178px;
+  justify-content: space-around;
+  width: 100%;
+}
+.footerSocial ul li {
+  display: inline-block;
+  width: 20px;
+}
+.footerSocial ul li a {
+  color: white;
+}
+.footerCopy {
+  text-align: center;
+  font-size: 16px;
+  @include blockInside;
+}

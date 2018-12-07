@@ -1,0 +1,40 @@
+.winterHeader {
+  @include textHeader;
+  margin: 50px;
+}
+.winterList {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.winterWrapSport {
+  text-align: left;
+  position: relative;
+  .winterWrapHeader {
+    font-family: bebas_Neue_Bold, sans-serif;
+    font-size: 60px;
+    font-weight: 800;
+    position: absolute;
+    margin-top: -130px;
+    margin-left: 15px;
+    color: white;
+    @include media-breakpoint-down(md) {
+      font-size: 40px;
+    }
+    @include media-breakpoint-down(xs) {
+      font-size: 12px;
+    }
+  }
+
+  .winterWrapText {
+    color: white;
+    margin-top: -80px;
+    position: absolute;
+    @include media-breakpoint-down(xs) {
+      font-size: 12px;
+
+    }
+  }
+  img {
+    width: 100%;
+  }
+}

@@ -1,0 +1,25 @@
+.weatherContent {
+  height: 554px;
+  background: url("../images/Layer_8.png") no-repeat;
+  background-size: cover;
+  position: relative;
+  .weatherWrapText {
+    position: absolute;
+    top: 30%;
+    right: 15%;
+    .weatherHeader {
+      @include text;
+      font-size: 100px;
+      color: white;
+      line-height: 90px;
+      text-shadow: 0 3px 7px rgba(0, 0, 0, 0.35);
+    }
+    .weatherText {
+      font-family: OpenSans, sans-serif;
+      text-shadow: 0 2px 0 #000000;
+      color: white;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+}
