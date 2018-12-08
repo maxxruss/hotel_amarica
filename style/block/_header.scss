@@ -9,7 +9,8 @@
     height: 120px;
     max-width: 1140px;
   }
-    .header__logo {
+
+  .header__logo {
     max-width: 121px;
     max-height: 53px;
     float: left;
@@ -29,29 +30,32 @@
     padding: 0;
     float: none;
   }
+}
+
+li {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 20px;
+  height: 33px;
+  width: 45px;
+  @include media-breakpoint-down(md) {
+    margin-right: 5px;
   }
-  li {
-    list-style-type: none;
-    display: inline-block;
-    margin-right: 20px;
-    height: 33px;
-    width: 45px;
-    @include media-breakpoint-down(md) {
-      margin-right: 5px;
-    }
-    a {
-      @include text;
-      font-size: 16px;
-      display: block;
-      color: black;
-      text-decoration: none;
-    }
+
+  a {
+    @include text;
+    font-size: 16px;
+    display: block;
+    color: black;
+    text-decoration: none;
   }
+}
 
 
 .noPadding {
   padding: 0;
 }
+
 .header__image {
   display: flex;
   flex-direction: row;
@@ -61,8 +65,10 @@
     align-items: center;
   }
 }
+
 .header__imageLeft {
   position: relative;
+
   .header__textWhite {
     @include text;
     color: white;
@@ -72,8 +78,12 @@
     top: 80%;
     left: 20%;
     @include media-breakpoint-down(sm) {
+      font-size: 45px;
+      top: 75%;
+    }
+    @include media-breakpoint-down(xs) {
       font-size: 40px;
-      top: 60%;
+      top: 55%;
     }
   }
 
@@ -85,13 +95,14 @@
     position: absolute;
     left: 20%;
     @include respondTo(wide-phones) {
-      font-size: 30px;
+      font-size: 40px;
     }
     @include respondTo(phones) {
-      font-size: 30px;
+      font-size: 40px;
     }
   }
 }
+
 .header__imageLeftPNG {
   background: url("../images/Layer_7.png") no-repeat;
   background-size: contain;
@@ -103,7 +114,7 @@
   }
   @include media-breakpoint-down(sm) {
     width: 580px;
-    height: 390px;
+    height: 360px;
   }
   @include media-breakpoint-down(xs) {
     width: 220px;
@@ -112,10 +123,14 @@
 }
 
 .header__imageRight {
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(lg) {
     margin-top: 60px;
   }
+  @include media-breakpoint-down(lg) {
+    margin-top: 115px;
+  }
 }
+
 .header__imageRight1 {
   background: url("../images/Layer_10.png") no-repeat;
   background-size: contain;
@@ -156,6 +171,7 @@ form {
   background: #1c1c1c;
   height: 80px;
   width: 830px;
+
   input {
     max-width: 150px;
     width: 100%;
@@ -166,7 +182,7 @@ form {
       padding: 0;
       margin-left: 5px;
     }
-    @include respondTo(wide-phones){
+    @include respondTo(wide-phones) {
       padding: 0;
       margin-left: 5px;
     }
@@ -176,11 +192,13 @@ form {
     }
   }
 }
+
 input::-webkit-input-placeholder {
   color: black;
   font-family: openSans, sans-serif;
   font-weight: 800;
 }
+
 input[type='submit'] {
   color: white;
   background: $mainColor;
